@@ -1,0 +1,170 @@
+import type { Order } from "./types"
+
+export const sampleOrders: Order[] = [
+  {
+    id: "PED-001",
+    tableNumber: 3,
+    items: [
+      { id: "i1", name: "Hamburguesa Clasica", quantity: 2, notes: "Sin cebolla", status: "nuevo" },
+      { id: "i2", name: "Papas Fritas", quantity: 2, status: "nuevo" },
+      { id: "i3", name: "Coca-Cola", quantity: 2, status: "nuevo" },
+    ],
+    status: "nuevo",
+    comments: [],
+    createdAt: new Date(Date.now() - 2 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 2 * 60 * 1000),
+    priority: true,
+  },
+  {
+    id: "PED-002",
+    tableNumber: 7,
+    items: [
+      { id: "i4", name: "Pizza Margherita", quantity: 1, status: "en_preparacion" },
+      { id: "i5", name: "Ensalada Cesar", quantity: 1, status: "listo" },
+      { id: "i6", name: "Agua Mineral", quantity: 2, status: "nuevo" },
+    ],
+    status: "en_progreso",
+    comments: [
+      {
+        id: "c1",
+        text: "La pizza ya esta en el horno",
+        author: "Carlos",
+        timestamp: new Date(Date.now() - 5 * 60 * 1000),
+      },
+    ],
+    createdAt: new Date(Date.now() - 12 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 5 * 60 * 1000),
+    priority: false,
+  },
+  {
+    id: "PED-003",
+    tableNumber: 1,
+    items: [
+      { id: "i7", name: "Tacos al Pastor", quantity: 4, status: "listo" },
+      { id: "i8", name: "Guacamole", quantity: 1, status: "en_preparacion" },
+      { id: "i9", name: "Margarita", quantity: 2, status: "nuevo" },
+    ],
+    status: "en_progreso",
+    comments: [
+      {
+        id: "c2",
+        text: "Cliente alergico a cilantro",
+        author: "Maria",
+        timestamp: new Date(Date.now() - 8 * 60 * 1000),
+      },
+      {
+        id: "c3",
+        text: "Tacos casi listos, falta guacamole",
+        author: "Chef Juan",
+        timestamp: new Date(Date.now() - 3 * 60 * 1000),
+      },
+    ],
+    createdAt: new Date(Date.now() - 15 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 3 * 60 * 1000),
+    priority: true,
+  },
+  {
+    id: "PED-004",
+    tableNumber: 5,
+    items: [
+      { id: "i10", name: "Sopa de Tortilla", quantity: 1, status: "listo" },
+      { id: "i11", name: "Enchiladas Verdes", quantity: 1, status: "listo" },
+      { id: "i12", name: "Flan Napolitano", quantity: 1, status: "listo" },
+    ],
+    status: "listo",
+    comments: [
+      {
+        id: "c4",
+        text: "Pedido completo, listo para servir",
+        author: "Chef Juan",
+        timestamp: new Date(Date.now() - 1 * 60 * 1000),
+      },
+    ],
+    createdAt: new Date(Date.now() - 25 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 1 * 60 * 1000),
+    priority: false,
+  },
+  {
+    id: "PED-005",
+    tableNumber: 10,
+    items: [
+      { id: "i13", name: "Burrito de Pollo", quantity: 3, status: "nuevo" },
+      { id: "i14", name: "Nachos con Queso", quantity: 1, status: "nuevo" },
+      { id: "i15", name: "Cerveza Artesanal", quantity: 3, status: "nuevo" },
+    ],
+    status: "nuevo",
+    comments: [],
+    createdAt: new Date(Date.now() - 1 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 1 * 60 * 1000),
+    priority: false,
+  },
+  {
+    id: "PED-006",
+    tableNumber: 2,
+    items: [
+      { id: "i16", name: "Ceviche de Camaron", quantity: 2, status: "servido" },
+      { id: "i17", name: "Arroz con Leche", quantity: 2, status: "servido" },
+    ],
+    status: "entregado",
+    comments: [
+      {
+        id: "c5",
+        text: "Entregado sin problemas",
+        author: "Luis",
+        timestamp: new Date(Date.now() - 10 * 60 * 1000),
+      },
+    ],
+    createdAt: new Date(Date.now() - 40 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 10 * 60 * 1000),
+    priority: false,
+  },
+  {
+    id: "PED-007",
+    tableNumber: 8,
+    items: [
+      { id: "i18", name: "Quesadilla de Huitlacoche", quantity: 2, status: "nuevo" },
+      { id: "i19", name: "Chile Relleno", quantity: 1, status: "nuevo" },
+      { id: "i20", name: "Horchata", quantity: 3, status: "nuevo" },
+    ],
+    status: "nuevo",
+    comments: [],
+    createdAt: new Date(Date.now() - 30 * 1000),
+    updatedAt: new Date(Date.now() - 30 * 1000),
+    priority: false,
+  },
+  {
+    id: "PED-008",
+    tableNumber: 12,
+    items: [
+      { id: "i21", name: "Pozole Rojo", quantity: 2, status: "nuevo" },
+      { id: "i22", name: "Tostadas de Tinga", quantity: 3, status: "en_preparacion" },
+      { id: "i23", name: "Agua de Jamaica", quantity: 2, status: "nuevo" },
+    ],
+    status: "en_progreso",
+    comments: [
+      {
+        id: "c6",
+        text: "Falta el pozole, se retraso el caldo",
+        author: "Chef Juan",
+        timestamp: new Date(Date.now() - 20 * 60 * 1000),
+      },
+    ],
+    createdAt: new Date(Date.now() - 45 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 20 * 60 * 1000),
+    priority: true,
+  },
+  {
+    id: "PED-009",
+    tableNumber: 4,
+    items: [
+      { id: "i24", name: "Mole Poblano", quantity: 1, status: "nuevo" },
+      { id: "i25", name: "Arroz Rojo", quantity: 1, status: "nuevo" },
+      { id: "i26", name: "Sopa Azteca", quantity: 1, status: "nuevo" },
+    ],
+    status: "nuevo",
+    comments: [],
+    createdAt: new Date(Date.now() - 35 * 60 * 1000),
+    updatedAt: new Date(Date.now() - 35 * 60 * 1000),
+    priority: false,
+  },
+]
